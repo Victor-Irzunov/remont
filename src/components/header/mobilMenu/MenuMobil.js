@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Link as LinkScroll } from 'react-scroll'
 import { PhoneOutlined, ShakeOutlined, CalendarOutlined } from '@ant-design/icons'
 import { DrawerComp } from '../../drawer/DrawerComp'
+import { DrawerCompForms } from '../../drawer/DrawerCompForms'
 // import image from '../../../images/menu/img.webp'
 
 export const MenuMobil = ({ onClose }) => {
@@ -32,8 +33,8 @@ export const MenuMobil = ({ onClose }) => {
 
 	return (
 		<div className='h-screen'>
-			<nav className='text-center h-full'>
-				<ul className='h-[60vh] flex flex-col justify-between items-start text-lg text-gray-800 cursor-pointer'>
+			<nav className='text-center h-screen'>
+				<ul className='h-[60vh] flex flex-col justify-between font-light items-start text-lg text-white cursor-pointer'>
 					<li>
 						<LinkScroll to='main'
 							smooth={true}
@@ -45,17 +46,6 @@ export const MenuMobil = ({ onClose }) => {
 							Главная
 						</LinkScroll>
 					</li>
-					{/* <li>
-						<LinkScroll to='service'
-							smooth={true}
-							offset={-100}
-							duration={800}
-							className="cursor-pointer"
-							onClick={onClose}
-						>
-							Услуги
-						</LinkScroll>
-					</li> */}
 					<li>
 						<LinkScroll to='price'
 							smooth={true}
@@ -115,9 +105,7 @@ export const MenuMobil = ({ onClose }) => {
 
 					<li className='mt-6'>
 						<p
-							//  type="text"
 							onClick={() => showDrawer('top', 'Заказать звонок', 'tel')}
-							// style={{paddingLeft:'0px' }}
 							className='text-sm'
 						>
 							<ShakeOutlined /> <span className='ml-1'>Заказать звонок</span>
@@ -135,11 +123,8 @@ export const MenuMobil = ({ onClose }) => {
 					</li>
 
 				</ul>
-				<div className='absolute bottom-1'>
-					{/* <Image src={image} width='80%' /> */}
-				</div>
 			</nav>
-			<DrawerComp open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
+			<DrawerCompForms open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
 		</div>
 	)
 }

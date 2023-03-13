@@ -15,12 +15,12 @@ export const PriceSection = () => {
 				</h2>
 
 				<div className='text-center uppercase'>
-				<p className='text-[10px] font-light'>
-					В 20% случаев, проблемы решается по телефону с помощью <span className='font-semibold'>БЕСПЛАТНОЙ</span> консультации.
-				</p>
-				<p className='text-[10px] font-light'>
-					В 90% случаев, мастер производит ремонт на месте в день обращения.
-				</p>
+					<p className='text-[10px] font-light'>
+						В 20% случаев, проблема решается по телефону с помощью <span className='font-semibold'>БЕСПЛАТНОЙ</span> консультации.
+					</p>
+					<p className='text-[10px] font-light'>
+						В 96% случаев, мастер производит ремонт на месте в день обращения.
+					</p>
 				</div>
 
 
@@ -28,25 +28,25 @@ export const PriceSection = () => {
 					<h3 className='uppercase mb-4'>
 						Ремонт холодильника
 					</h3>
-					<Image src={img} width='40px' />
+					<Image src={img} width='40px' preview={false} />
 					<p className='mt-3 mb-3 font-light'>
-						от 30 руб
+						от 40 руб
 					</p>
 					<p className='mt-2 text-[10px] font-light mb-1 uppercase'>
-						Диагностика неисправности бесплатная
-					</p>	
+						Диагностика неисправности 30р, <br /> в случае ремонта БЕСПЛАТНО
+					</p>
 					<p className='mt-1 text-xs font-light'>
-					Гарантия 12 месяцев
-					</p>	
+						Гарантия до 2-х лет
+					</p>
 					<div className='text-left mt-5'>
-					<Collapse accordion size='small'>
+						<Collapse accordion size='small'>
 							<Panel header={
 								<div className='flex justify-between'>
 									<span>
-										Не включается
+										Не холодит
 									</span>
 									<span>
-										от 30 руб
+										от 40 руб
 									</span>
 								</div>
 							}
@@ -54,18 +54,18 @@ export const PriceSection = () => {
 							>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Неисправен сетевой шнур
+										Не морозит
 									</span>
 									<span className=''>
-										30 руб
+										40 руб
 									</span>
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Повреждение электропроводки
+										Не включается
 									</span>
 									<span className=''>
-										40 руб
+										50 руб
 									</span>
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
@@ -167,7 +167,7 @@ export const PriceSection = () => {
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Засор капилярной трубки
+										Засор капиллярной трубки
 									</span>
 									<span className=''>
 										110 руб
@@ -200,18 +200,18 @@ export const PriceSection = () => {
 					<h3 className='uppercase mb-4'>
 						Ремонт стиральной машины
 					</h3>
-					<Image src={img2} width='40px' />
+					<Image src={img2} width='40px' preview={false} />
 					<p className='mt-3 mb-1 font-light'>
 						от 30 руб
 					</p>
 					<p className='mt-2 text-[10px] font-light mb-1 uppercase'>
-						Диагностика неисправности бесплатная
-					</p>	
+						Диагностика неисправности бесплатная, <br /> в случае дальнейшего ремонта
+					</p>
 					<p className='mt-1 text-xs font-light'>
-					Гарантия 12 месяцев
-					</p>	
+						Гарантия до 2-х лет
+					</p>
 					<div className='text-left mt-5'>
-					
+
 						<Collapse accordion size='small'>
 							<Panel header={
 								<div className='flex justify-between'>
@@ -243,7 +243,7 @@ export const PriceSection = () => {
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Неисправена кнопка включения
+										Неисправна кнопка включения
 									</span>
 									<span className=''>
 										30 руб
@@ -348,7 +348,7 @@ export const PriceSection = () => {
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Не исправлен двигатель
+										Неисправен двигатель
 									</span>
 									<span className=''>
 										55 руб
@@ -373,16 +373,16 @@ export const PriceSection = () => {
 					<h3 className='uppercase mb-4'>
 						Ремонт посудомоечной машины
 					</h3>
-					<Image src={img3} width='45px' />
+					<Image src={img3} width='45px' preview={false} />
 					<p className='mt-3 mb-1 font-light'>
 						от 35 руб
 					</p>
 					<p className='mt-2 text-[10px] font-light mb-1 uppercase'>
-						Диагностика неисправности бесплатная
-					</p>	
+						Диагностика неисправности бесплатная, <br /> в случае дальнейшего ремонта
+					</p>
 					<p className='mt-1 text-xs font-light'>
-					Гарантия 12 месяцев
-					</p>	
+						Гарантия до 2-х лет
+					</p>
 					<div className='text-left mt-5'>
 						<Collapse accordion size='small'>
 							<Panel header={
@@ -450,7 +450,7 @@ export const PriceSection = () => {
 								</div>
 								<div className='flex justify-between text-xs mb-1'>
 									<span className=''>
-										Неисправена эл. проводка
+										Неисправна эл. проводка
 									</span>
 									<span className=''>
 										45 руб
@@ -507,7 +507,7 @@ export const PriceSection = () => {
 										Повреждение уплотнителя двери
 									</span>
 									<span className=''>
-									65 руб
+										65 руб
 									</span>
 								</div>
 								<div className='flex justify-between text-xs mb-1'>

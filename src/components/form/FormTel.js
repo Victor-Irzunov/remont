@@ -52,7 +52,7 @@ export const FormTel = ({ btn = 'Жду звонка' }) => {
 				autoComplete="off"
 			>
 				<Form.Item
-					label="Телефон"
+					label='Телефон'
 					name="tel"
 					tooltip="код оператора и номер"
 					rules={[
@@ -71,10 +71,7 @@ export const FormTel = ({ btn = 'Жду звонка' }) => {
 						value={tel}
 						onChange={(e) => setTel(e.target.value)}
 					/>
-
 				</Form.Item>
-
-
 				<Form.Item
 					wrapperCol={{
 						offset: 8,
@@ -87,7 +84,7 @@ export const FormTel = ({ btn = 'Жду звонка' }) => {
 				</Form.Item>
 
 			</Form>
-			<p className='mt-4 text-gray-500 text-xs'>
+			<p className='text-orange-500 text-[10px] mt-10 uppercase'>
 				Оправьте нам свой номер телефона и мы Вам перезвоним в ближайшее время.
 			</p>
 		</>

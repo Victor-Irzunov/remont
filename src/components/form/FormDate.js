@@ -55,6 +55,7 @@ export const FormDate = () => {
 				wrapperCol={{
 					span: 24,
 				}}
+				
 				onFinish={onFinish}
 				onFinishFailed={onFinishFailed}
 				autoComplete="off"
@@ -62,9 +63,9 @@ export const FormDate = () => {
 
 
 				<Form.Item
-					label="Выберите дату"
+					label='Выберите дату'
 					name="date"
-					tooltip="Если на эту дату свободный мастеров нет Вам перезвонит наш менеджер"
+					// tooltip="Если на эту дату свободный мастеров нет Вам перезвонит наш менеджер"
 					rules={[
 						{
 							required: true,
@@ -72,13 +73,14 @@ export const FormDate = () => {
 						},
 					]}
 				>
-					<DatePicker size='large' />
+					<DatePicker
+					/>
 				</Form.Item>
 
 				<Form.Item
-					label="Выберите время"
+					label='Выберите время'
 					name="time"
-					tooltip="Если на это время свободный мастеров нет Вам перезвонит наш менеджер"
+					// tooltip="Если на это время свободный мастеров нет Вам перезвонит наш менеджер"
 					rules={[
 						{
 							required: true,
@@ -86,11 +88,15 @@ export const FormDate = () => {
 						},
 					]}
 				>
-					<TimePicker size='large' />
+					<TimePicker
+						showTime={{
+							format: 'HH:mm',
+						}}
+					/>
 				</Form.Item>
 
 				<Form.Item
-					label="Сообщение"
+					label='Сообщение'
 					name="message"
 					tooltip=""
 				>
@@ -104,8 +110,10 @@ export const FormDate = () => {
 
 
 				<Form.Item
-					label="Телефон"
+					label='
+					Телефон'
 					name="tel"
+					
 					tooltip="код оператора и номер"
 					rules={[
 						{
@@ -118,7 +126,7 @@ export const FormDate = () => {
 						placeholder="29 123-45-67"
 						mask="+3\7\5 99 999 99 99"
 						maskChar={'-'}
-						className='border py-3 px-5 rounded-md w-full'
+						className='border py-1 px-4 rounded-md w-full'
 						beforeMaskedValueChange={beforeMaskedValueChange}
 						value={tel}
 						onChange={(e) => setTel(e.target.value)}
@@ -137,7 +145,7 @@ export const FormDate = () => {
 				</Form.Item>
 			</Form>
 
-			<p className='text-gray-500 text-xs'>15% скидка за предварительную запись.</p>
+			<p className='text-orange-500 text-[10px] mt-10 uppercase'>15% скидка по предварительной записи</p>
 
 		</>
 	)

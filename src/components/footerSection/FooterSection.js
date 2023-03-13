@@ -1,6 +1,7 @@
 import { Button } from 'antd'
 import React, { useState } from 'react'
 import { DrawerComp } from '../drawer/DrawerComp'
+import { DrawerCompForms } from '../drawer/DrawerCompForms'
 
 export const FooterSection = () => {
 	const [open, setOpen] = useState(false)
@@ -51,7 +52,7 @@ export const FooterSection = () => {
 
 				<div className='text-white'>
 					<p className='text-xs uppercase'>
-						запишитесь заранее на определёное время и получите скидку<span className='text-orange-500 text-sm'> 15%</span> на ремонт Вашей техники.
+						запишитесь заранее на определённое время и получите скидку<span className='text-orange-500 text-sm'> 15%</span> на ремонт Вашей техники.
 					</p>
 					<Button
 						type='primary'
@@ -90,7 +91,7 @@ export const FooterSection = () => {
 					</p>
 				</div>
 			</div>
-			<DrawerComp open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
+			<DrawerCompForms open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
 		</section>
 	)
 }

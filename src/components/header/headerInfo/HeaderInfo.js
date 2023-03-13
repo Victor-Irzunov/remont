@@ -11,6 +11,7 @@ import logo4 from '../../../images/logo/24_7_1.svg'
 import logo from '../../../images/logo/1.svg'
 import logo2 from '../../../images/logo/fridge.svg'
 import logo3 from '../../../images/logo/washing-machine.svg'
+import { DrawerCompForms } from '../../drawer/DrawerCompForms'
 
 export const HeaderInfo = ({ setIsVisible }) => {
 	const screens = useScreens()
@@ -130,7 +131,7 @@ export const HeaderInfo = ({ setIsVisible }) => {
 						<Affix offsetTop={30} onChange={() => setIsVisible(i => !i)}><div></div></Affix>
 					</div>
 			}
-			<DrawerComp open={open} placement={'top'} title={'Заказать звонок'} setOpen={setOpen} isActiveForm={{ tel: true }} />
+			<DrawerCompForms open={open} placement={'top'} title={'Заказать звонок'} setOpen={setOpen} isActiveForm={{ tel: true }} />
 		</>
 	)
 }

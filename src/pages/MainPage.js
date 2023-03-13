@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import { PercentageOutlined, UsergroupAddOutlined, FormOutlined, DollarCircleOutlined } from '@ant-design/icons'
+import {
+	PercentageOutlined, UsergroupAddOutlined,
+	FormOutlined, DollarCircleOutlined,
+	GiftOutlined, NotificationOutlined
+} from '@ant-design/icons'
 import { Button, notification } from 'antd'
 import { ModalComp } from '../components/modal/ModalComp'
 import { PriceSection } from '../components/priceSection/PriceSection'
@@ -7,6 +11,7 @@ import { FotoSlider } from '../components/fotoSliderSection/FotoSlider'
 import { OtzyvySection2 } from '../components/otzyvySection/OtzyvySection2'
 import { FooterSection } from '../components/footerSection/FooterSection'
 import VoprosOtvet from '../components/voprosOtvet/VoprosOtvet'
+import { InfoSection } from '../components/infoSection/InfoSection'
 
 export const MainPage = () => {
 
@@ -24,11 +29,20 @@ export const MainPage = () => {
 		if (key === 1) {
 			api[type](
 				{
-					message: 'Выгодное предложение',
+					message: 'Предоставляем скидку 20%',
 					description: (
 						<div>
-							<UsergroupAddOutlined />
-							{' '}Порекомендуйте другу и друг получит скидку 10%
+							<ul className='list-disc'>
+								<li>
+									Пенсионерам
+								</li>
+								<li>
+									Инвалидам
+								</li>
+								<li>
+									Многодетным семьям
+								</li>
+							</ul>
 						</div>
 					)
 				},
@@ -101,9 +115,22 @@ export const MainPage = () => {
 								className='font-light ml-2'
 								onClick={() => openNotificationWithIcon('success', 1)}
 							>
-								Выгодное предложение
+								Скидка 20%
 							</span>
 						</div>
+					</div>
+
+					<div className='mt-20'>
+						<p className='text-white text-2xl uppercase'>
+							Клиенты наше все!
+						</p>
+						<div className=''>
+							<GiftOutlined className='text-orange-500 text-4xl' />
+							<p className='text-white font-light mt-5'>
+								Подарки каждому клиенту магнитики и средство для очистки
+							</p>
+						</div>
+
 					</div>
 				</div>
 
@@ -112,12 +139,13 @@ export const MainPage = () => {
 				<ModalComp isModalOpen={isModalOpen} title={title} handleCancel={handleCancel} question={true} />
 			</section>
 			<PriceSection />
+			<InfoSection />
 
 			<FotoSlider />
 
 			<OtzyvySection2 />
-			
-			<VoprosOtvet/>
+
+			<VoprosOtvet />
 
 			<FooterSection />
 		</>

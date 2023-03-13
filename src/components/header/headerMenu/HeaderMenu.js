@@ -9,6 +9,7 @@ import logo2 from '../../../images/logo/fridge.svg'
 import logo3 from '../../../images/logo/washing-machine.svg'
 
 import { Link as LinkScroll } from 'react-scroll'
+import { DrawerCompForms } from '../../drawer/DrawerCompForms'
 
 export const HeaderMenu = ({ isVisible }) => {
 	const [isAffix, setIsAffix] = useState(false)
@@ -22,9 +23,24 @@ export const HeaderMenu = ({ isVisible }) => {
 	const screens = useScreens()
 
 	const [open, setOpen] = useState(false)
+	const [openForm, setOpenForm] = useState(false)
 
 	const showDrawer = (position, title, str) => {
 		setOpen(true)
+		setPlacement(position)
+		setTitle(title)
+		switch (str) {
+			case 'tel': setIsActiveForm(prev => ({ ...prev, tel: true, date: false, menu: false }))
+				break
+			case 'date': setIsActiveForm(prev => ({ ...prev, tel: false, date: true, menu: false }))
+				break
+			case 'menu': setIsActiveForm(prev => ({ ...prev, tel: false, date: false, menu: true }))
+				break
+		}
+	}
+
+	const showDrawerForm = (position, title, str) => {
+		setOpenForm(true)
 		setPlacement(position)
 		setTitle(title)
 		switch (str) {
@@ -115,12 +131,12 @@ export const HeaderMenu = ({ isVisible }) => {
 										<li className='ml-48'>
 										</li>
 										<li>
-											<Button type='primary' onClick={() => showDrawer('top', 'Заказать звонок', 'tel')}>
+											<Button type='primary' onClick={() => showDrawerForm('top', 'Заказать звонок', 'tel')}>
 												<ShakeOutlined /> Заказать звонок
 											</Button>
 										</li>
 										<li>
-											<Button type='primary' onClick={() => showDrawer('right', 'Заказать на дату', 'date')}>
+											<Button type='primary' onClick={() => showDrawerForm('right', 'Заказать на дату', 'date')}>
 												<CalendarOutlined /> Заказать на дату
 											</Button>
 										</li>
@@ -173,6 +189,7 @@ export const HeaderMenu = ({ isVisible }) => {
 					</>
 			}
 			<DrawerComp open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
+			<DrawerCompForms open={openForm} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
 		</div>
 	)
 }
