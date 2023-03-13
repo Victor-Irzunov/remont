@@ -38,8 +38,8 @@ export const PriceSection = () => {
 					<p className='mt-1 text-xs font-light'>
 						Гарантия до 2-х лет
 					</p>
-					<div className='text-left mt-5'>
-						<Collapse accordion size='small'>
+					<div className='text-left mt-5 px-4'>
+						{/* <Collapse accordion size='small'>
 							<Panel header={
 								<div className='flex justify-between'>
 									<span>
@@ -190,7 +190,27 @@ export const PriceSection = () => {
 									</span>
 								</div>
 							</Panel>
-						</Collapse>
+						</Collapse> */}
+						<ul className='text-sm tracking-wide'>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>Не холодит</span> <span className='' >от 40 руб</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>Не морозит</span> <span className='' >от 40 руб</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''> Не включается</span> <span className='' >от 50 руб</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''> Не выключается</span> <span className='' >от 60 руб</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''> Намерзает</span> <span className='' >от 45 руб</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''> Шумит</span> <span className='' >от 40 руб</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -210,9 +230,9 @@ export const PriceSection = () => {
 					<p className='mt-1 text-xs font-light'>
 						Гарантия до 2-х лет
 					</p>
-					<div className='text-left mt-5'>
+					<div className='text-left mt-5 px-4'>
 
-						<Collapse accordion size='small'>
+						{/* <Collapse accordion size='small'>
 							<Panel header={
 								<div className='flex justify-between'>
 									<span>
@@ -363,7 +383,58 @@ export const PriceSection = () => {
 									</span>
 								</div>
 							</Panel>
-						</Collapse>
+						</Collapse> */}
+
+						<ul className='text-sm tracking-wide'>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не греет воду
+								</span>
+								<span className='' >
+									от 40 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не сливает
+								</span>
+								<span className='' >
+									от 40 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Шумит
+								</span>
+								<span className='' >
+									от 50 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не крутит барабан
+								</span>
+								<span className='' >
+									от 50 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Прыгает
+								</span>
+								<span className='' >
+									от 35 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не начинает стирку
+								</span>
+								<span className='' >
+									от 30 руб
+								</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -383,8 +454,8 @@ export const PriceSection = () => {
 					<p className='mt-1 text-xs font-light'>
 						Гарантия до 2-х лет
 					</p>
-					<div className='text-left mt-5'>
-						<Collapse accordion size='small'>
+					<div className='text-left mt-5 px-4'>
+						{/* <Collapse accordion size='small'>
 							<Panel header={
 								<div className='flex justify-between'>
 									<span>
@@ -535,7 +606,51 @@ export const PriceSection = () => {
 									</span>
 								</div>
 							</Panel>
-						</Collapse>
+						</Collapse> */}
+
+						<ul className='text-sm tracking-wide'>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не включается
+								</span>
+								<span className='' >
+									от 30 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не сливает
+								</span>
+								<span className='' >
+									от 40 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Плохо моет
+								</span>
+								<span className='' >
+									от 40 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+									Не заливает воду
+								</span>
+								<span className='' >
+									от 30 руб
+								</span>
+							</li>
+							<li className='mb-2 flex justify-between'>
+								<span className=''>
+								Не сушит
+								</span>
+								<span className='' >
+									от 50 руб
+								</span>
+							</li>
+							
+						</ul>
 					</div>
 				</div>
 			</div>
