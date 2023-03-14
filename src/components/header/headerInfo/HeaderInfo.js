@@ -79,9 +79,12 @@ export const HeaderInfo = ({ setIsVisible }) => {
 							<div className='flex flex-col items-center'>
 								<p className='text-sm text-[#f8862e] mb-1'>Напишите нам</p>
 								<div>
-									<a fref='https://t.me/@'><Image src={telegram} style={{ width: '30px' }} /></a>
-									<a fref='http://wa.me/37529?text=нужен%ремонт%20'><Image src={whatsapp} style={{ width: '30px', marginLeft: '8px' }} /></a>
-									<a fref='viber://add?number=37529'><Image src={viber} style={{ width: '30px', marginLeft: '8px' }} /></a>
+									<a href={`${screens.md ? 'https://t.me/Alex150685' : 'https://t.me/@Alex150685'}`}><Image src={telegram} preview={false} style={{ width: '30px' }} /></a>
+									<a href='http://wa.me/37529?text=нужен%ремонт%20'><Image src={whatsapp} preview={false} style={{ width: '30px', marginLeft: '8px' }} /></a>
+									{/* <a href='https://www.instagram.com/santexnika.by' target='_blank' >
+										<Image src={instagram} preview={false} width='25px' />
+									</a> */}
+									<a href='viber://chat?number=%2B375'><Image src={viber} preview={false} style={{ width: '30px', marginLeft: '8px' }} /></a>
 								</div>
 							</div>
 						</div>
@@ -122,10 +125,11 @@ export const HeaderInfo = ({ setIsVisible }) => {
 
 						<div className='flex flex-col items-center mb-2'>
 							<p className='text-sm text-[#f8862e] mb-2 uppercase' onClick={() => showDrawer('top', 'Заказать звонок')}><ShakeOutlined /> Заказать звонок</p>
-							<div>
-								<a fref='https://t.me/@'><Image src={telegram} style={{ width: '30px' }} /></a>
-								<a fref='http://wa.me/37529?text=нужен%ремонт%20'><Image src={whatsapp} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
-								<a fref='viber://add?number=37529'><Image src={viber} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
+							<div className='z-20'>
+
+								<a href={`${screens.md ? 'https://t.me/Alex150685' : 'https://t.me/@Alex150685'}`}><Image src={telegram} preview={false} style={{ width: '30px' }} /></a>
+								<a href='https://wa.me/37529?text=нужен%ремонт%20'><Image src={whatsapp} preview={false} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
+								<a href='viber://chat?number=%2B375'><Image src={viber} preview={false} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
 							</div>
 						</div>
 						<Affix offsetTop={30} onChange={() => setIsVisible(i => !i)}><div></div></Affix>
